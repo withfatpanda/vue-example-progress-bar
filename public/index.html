@@ -13,6 +13,8 @@
       <div class="row">
         
         <div class="col-md-6 push-md-3">
+
+          <h1 class="h3 mb-4">Progress</h1>
           
           <div class="form-group">
             <div class="progress">
@@ -32,7 +34,7 @@
           <div class="form-group">
             <label for="progress-input">Progress Input</label>
             <input id="progress-input" type="number" class="form-control" v-model="progress">
-            <small class="form-text text-muted smaller">
+            <small class="form-text text-muted">
               Use this input to set progress to an explict value. 
               Because it does not use our view's methods, it can be set to 
               any value, though you will be required you use use a number.
@@ -144,6 +146,59 @@
               <option>99</option>
               <option>100</option>
             </select>
+            <small class="form-text text-muted">
+              This select input also controls and reacts to changes in progress.
+              Because it is a select input, the range of possible values is
+              controlled by the HTML. Try putting some value in the number
+              input above that is not between 0 and 100. What happens?
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label>Progress Choices</label>
+            <small class="form-text text-muted mb-3">
+              Note below that not all possible values for progress are represented.
+              This is done to show you how radio buttons behave when bound to
+              a data variable that itself can take on values not represented among
+              the choices.
+            </small>
+            <ul class="list-unstyled">
+              <li>
+                <label class="custom-control custom-radio">
+                  <input id="progress-radio-0" name="progress" type="radio" class="custom-control-input" value="0" v-model="progress">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">0</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-radio">
+                  <input id="progress-radio-25" name="progress" type="radio" class="custom-control-input" value="25" v-model="progress">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">25</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-radio">
+                  <input id="progress-radio-50" name="progress" type="radio" class="custom-control-input" value="50" v-model="progress">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">50</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-radio">
+                  <input id="progress-radio-75" name="progress" type="radio" class="custom-control-input" value="75" v-model="progress">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">75</span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-control custom-radio">
+                  <input id="progress-radio-100" name="progress" type="radio" class="custom-control-input" value="100" v-model="progress">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">100</span>
+                </label>
+              </li>
+            </ul>
           </div>
 
         </div>
